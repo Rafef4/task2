@@ -1,0 +1,187 @@
+{\rtf1\fbidis\ansi\ansicpg1256\deff0\nouicompat\deflang1025{\fonttbl{\f0\fnil\fcharset178 Arial;}{\f1\fnil\fcharset0 Arial;}}
+{\colortbl ;\red255\green255\blue255;\red0\green0\blue128;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\rtlpar\sa200\sl276\slmult1\cf1\highlight2\f0\rtlch\fs22\'df\'e6\'cf \'c7\'e1\'c7\'d1\'cf\'e6\'ed\'e4\'e6 .. \'c7\'e1\'ce\'c7\'d5 \'c8\'c7\'e1\'ca\'cd\'df\'e3.\f1\ltrch\lang1033\par
+\cf0\highlight0\par
+\f0\rtlch\lang1025 #\f1\ltrch\lang1033 include <Servo.h\f0\rtlch\lang1025 > \par
+ \par
+\f1\ltrch\lang1033 volatile char v\f0\rtlch\lang1025 ; \par
+\f1\ltrch\lang1033 Servo servo_7\f0\rtlch\lang1025 ; \par
+ \par
+\f1\ltrch\lang1033 void setup\f0\rtlch\lang1025 ()\{ \par
+  \f1\ltrch\lang1033 v = 0\f0\rtlch\lang1025 ; \par
+  \f1\ltrch\lang1033 Serial.begin\f0\rtlch\lang1025 (\f1\ltrch\lang1033 9600\f0\rtlch\lang1025 ); \par
+  \f1\ltrch\lang1033 servo_7.attach\f0\rtlch\lang1025 (\f1\ltrch\lang1033 7\f0\rtlch\lang1025 ); \par
+\} \par
+ \par
+\f1\ltrch\lang1033 void loop\f0\rtlch\lang1025 ()\{ \par
+  \f1\ltrch\lang1033 v = Serial.read\f0\rtlch\lang1025 (); \par
+  \f1\ltrch\lang1033 if (Serial.available() > 0)\f0\rtlch\lang1025  \{ \par
+    \f1\ltrch\lang1033 if (v == 'A')\f0\rtlch\lang1025  \{ \par
+      \f1\ltrch\lang1033 servo_7.write\f0\rtlch\lang1025 (\f1\ltrch\lang1033 0\f0\rtlch\lang1025 ); \par
+      \f1\ltrch\lang1033 delay\f0\rtlch\lang1025 (\f1\ltrch\lang1033 100\f0\rtlch\lang1025 ); \par
+ \par
+    \} \par
+    \f1\ltrch\lang1033 if (v == 'B')\f0\rtlch\lang1025  \{ \par
+      \f1\ltrch\lang1033 servo_7.write\f0\rtlch\lang1025 (\f1\ltrch\lang1033 180\f0\rtlch\lang1025 ); \par
+      \f1\ltrch\lang1033 delay\f0\rtlch\lang1025 (\f1\ltrch\lang1033 100\f0\rtlch\lang1025 ); \par
+ \par
+    \} \par
+ \par
+  \} \par
+ \par
+\}\f1\ltrch\lang1033\par
+\par
+\par
+\par
+\par
+\par
+\par
+\cf1\highlight2 wep serial AP .. code.\par
+\cf0\highlight0\par
+\f0\rtlch\lang1025\par
+<\f1\ltrch\lang1033 html lang="en\f0\rtlch\lang1025 "> \par
+ \par
+<\f1\ltrch\lang1033 head\f0\rtlch\lang1025 > \par
+    <\f1\ltrch\lang1033 meta charset="UTF-8\f0\rtlch\lang1025 "> \par
+    <\f1\ltrch\lang1033 meta name="viewport" content="width=device-width, initial-scale=1.0\f0\rtlch\lang1025 "> \par
+    <\f1\ltrch\lang1033 meta http-equiv="X-UA-Compatible" content="ie=edge\f0\rtlch\lang1025 "> \par
+    <\f1\ltrch\lang1033 title>Document</title\f0\rtlch\lang1025 > \par
+</\f1\ltrch\lang1033 head\f0\rtlch\lang1025 > \par
+<\f1\ltrch\lang1033 style\f0\rtlch\lang1025 > \par
+    \f1\ltrch\lang1033 body\f0\rtlch\lang1025  \{ \par
+        \f1\ltrch\lang1033 font-family: 'Share Tech', sans-serif\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 font-size: 17px\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 color: white\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 display: flex\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 justify-content: center\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 align-items: center\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 margin: 0\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 width: 100vw\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 height: 100vh\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 text-shadow: 8px 8px 10px #0000008c\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 background-color: #343a40\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 background-image: url("data:image/svg+xml,%3Csvg xmlns='{{\field{\*\fldinst{HYPERLINK http://www.w3.org/2000/svg }}{\fldrslt{http://www.w3.org/2000/svg\ul0\cf0}}}}\f1\fs22 ' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000)\f0\rtlch\lang1025 ; \par
+    \} \par
+ \par
+    \f1\ltrch\lang1033 h1\f0\rtlch\lang1025  \{ \par
+        \f1\ltrch\lang1033 text-align: right\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 margin: 20px\f0\rtlch\lang1025 ; \par
+ \par
+    \} \par
+ \par
+    \f1\ltrch\lang1033 textarea\f0\rtlch\lang1025  \{ \par
+        \f1\ltrch\lang1033 text-align: right\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 width: 50%\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 height: 200px\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 padding: 12px 20px\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 box-sizing: border-box\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 border: 2px solid #ccc\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 border-radius: 4px\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 background-color: #f8f8f8\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 font-size: 16px\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 resize: none\f0\rtlch\lang1025 ; \par
+ \par
+    \} \par
+</\f1\ltrch\lang1033 style\f0\rtlch\lang1025 > \par
+ \par
+<\f1\ltrch\lang1033 body\f0\rtlch\lang1025 > \par
+ \par
+    <\f1\ltrch\lang1033 h1\f0\rtlch\lang1025 >\'e3\'e1\'ca\'de\'d8 \'c7\'e1\'d5\'e6\'ca</\f1\ltrch\lang1033 h1\f0\rtlch\lang1025 > \par
+    <\f1\ltrch\lang1033 textarea type="text" id="speechToText" placeholder\f0\rtlch\lang1025 ="... \'c7\'d6\'db\'d8 \'e5\'e4\'c7 \'cb\'e3 \'ca\'cd\'cf\'cb " \f1\ltrch\lang1033 onclick="record()"></textarea\f0\rtlch\lang1025 > \par
+    <\f1\ltrch\lang1033 button onclick="connectSerial\f0\rtlch\lang1025 ()">\'c7\'ca\'d5\'c7\'e1</\f1\ltrch\lang1033 button\f0\rtlch\lang1025 > \par
+ \par
+    <\f1\ltrch\lang1033 script\f0\rtlch\lang1025 > \par
+        \f1\ltrch\lang1033 var port, textEncoder, writableStreamClosed, writer\f0\rtlch\lang1025 ; \par
+        \f1\ltrch\lang1033 async function connectSerial\f0\rtlch\lang1025 () \{ \par
+            \f1\ltrch\lang1033 try\f0\rtlch\lang1025  \{ \par
+                // \f1\ltrch\lang1033 Prompt user to select any serial port\f0\rtlch\lang1025 . \par
+                \f1\ltrch\lang1033 port = await navigator.serial.requestPort\f0\rtlch\lang1025 (); \par
+                \f1\ltrch\lang1033 await port.open(\{ baudRate: 9600 \})\f0\rtlch\lang1025 ; \par
+ \par
+                \f1\ltrch\lang1033 textEncoder = new TextEncoderStream\f0\rtlch\lang1025 (); \par
+                \f1\ltrch\lang1033 writableStreamClosed = textEncoder.readable.pipeTo(port.writable)\f0\rtlch\lang1025 ; \par
+ \par
+                \f1\ltrch\lang1033 writer = textEncoder.writable.getWriter\f0\rtlch\lang1025 (); \par
+                \f1\ltrch\lang1033 listenToPort\f0\rtlch\lang1025 (); \par
+            \} \f1\ltrch\lang1033 catch\f0\rtlch\lang1025  \{ \par
+                \f1\ltrch\lang1033 alert("Serial Connection Failed")\f0\rtlch\lang1025 ; \par
+            \} \par
+        \} \par
+ \par
+ \par
+        \f1\ltrch\lang1033 function record\f0\rtlch\lang1025 () \{ \par
+            \f1\ltrch\lang1033 var recognition = new webkitSpeechRecognition\f0\rtlch\lang1025 (); \par
+            \f1\ltrch\lang1033 recognition.lang = "ar\f0\rtlch\lang1025 "; \par
+ \par
+            \f1\ltrch\lang1033 recognition.onresult = function (event)\f0\rtlch\lang1025  \{ \par
+ \par
+                \f1\ltrch\lang1033 var a = document.getElementById('speechToText').value = event.results[0][0].transcript\f0\rtlch\lang1025 ; \par
+                \f1\ltrch\lang1033 if\f0\rtlch\lang1025  (\f1\ltrch\lang1033 a\f0\rtlch\lang1025  == "\'ed\'e3\'ed\'e4." || \f1\ltrch\lang1033 a\f0\rtlch\lang1025 =="\'ed\'e3\'ed\'e4") \{ \par
+                    \f1\ltrch\lang1033 console.log(a)\f0\rtlch\lang1025  \par
+                    \f1\ltrch\lang1033 sendSerialLine\f0\rtlch\lang1025 (); \par
+ \par
+                \}\f1\ltrch\lang1033 else if(a\f0\rtlch\lang1025  == "\'ed\'d3\'c7\'d1." || \f1\ltrch\lang1033 a\f0\rtlch\lang1025 =="\'ed\'d3\'c7\'d1") \{ \par
+                    \f1\ltrch\lang1033 console.log(a)\f0\rtlch\lang1025  \par
+                    \f1\ltrch\lang1033 sendSerialLineB\f0\rtlch\lang1025 (); \par
+ \par
+                \} \par
+ \par
+            \} \par
+            \f1\ltrch\lang1033 recognition.start\f0\rtlch\lang1025 (); \par
+ \par
+        \} \par
+ \par
+ \par
+        \f1\ltrch\lang1033 document.querySelector('button').addEventListener('click', async\f0\rtlch\lang1025  () => \{ \par
+            \f1\ltrch\lang1033 const port = await navigator.serial.requestPort\f0\rtlch\lang1025 (); \par
+            \f1\ltrch\lang1033 await port.open(\{ baudRate: 9600 \})\f0\rtlch\lang1025 ; \par
+ \par
+        \}); \par
+ \par
+ \par
+ \par
+ \par
+ \par
+ \par
+        \f1\ltrch\lang1033 async function listenToPort\f0\rtlch\lang1025 () \{ \par
+            \f1\ltrch\lang1033 const textDecoder = new TextDecoderStream\f0\rtlch\lang1025 (); \par
+            \f1\ltrch\lang1033 const readableStreamClosed = port.readable.pipeTo(textDecoder.writable)\f0\rtlch\lang1025 ; \par
+            \f1\ltrch\lang1033 const reader = textDecoder.readable.getReader\f0\rtlch\lang1025 (); \par
+            // \f1\ltrch\lang1033 Listen to data coming from the serial device\f0\rtlch\lang1025 . \par
+            \f1\ltrch\lang1033 while (true)\f0\rtlch\lang1025  \{ \par
+                \f1\ltrch\lang1033 const \{ value, done \} = await reader.read\f0\rtlch\lang1025 (); \par
+                \f1\ltrch\lang1033 if (done)\f0\rtlch\lang1025  \{ \par
+                    // \f1\ltrch\lang1033 Allow the serial port to be closed later\f0\rtlch\lang1025 . \par
+                    \f1\ltrch\lang1033 reader.releaseLock\f0\rtlch\lang1025 (); \par
+                    \f1\ltrch\lang1033 break\f0\rtlch\lang1025 ; \par
+                \} \par
+                // \f1\ltrch\lang1033 value is a string\f0\rtlch\lang1025 . \par
+                \f1\ltrch\lang1033 appendToTerminal(value)\f0\rtlch\lang1025 ; \par
+            \} \par
+ \par
+ \par
+        \} \par
+        \f1\ltrch\lang1033 async function sendSerialLine() \{dataToSend = 'A\f0\rtlch\lang1025 ' \par
+            \f1\ltrch\lang1033 dataToSend = dataToSend + "\\r\\n\f0\rtlch\lang1025 "; \par
+ \par
+            \f1\ltrch\lang1033 await writer.write(dataToSend)\f0\rtlch\lang1025 ; \par
+        \} \par
+        \f1\ltrch\lang1033 async function sendSerialLineB\f0\rtlch\lang1025 () \{ \par
+            \f1\ltrch\lang1033 dataToSend = 'B\f0\rtlch\lang1025 ' \par
+            \f1\ltrch\lang1033 dataToSend = dataToSend + "\\r\\n\f0\rtlch\lang1025 "; \par
+ \par
+            \f1\ltrch\lang1033 await writer.write(dataToSend)\f0\rtlch\lang1025 ; \par
+        \} \par
+ \par
+ \par
+  \par
+ \par
+    </\f1\ltrch\lang1033 script\f0\rtlch\lang1025 > \par
+ \par
+ \par
+</\f1\ltrch\lang1033 body\f0\rtlch\lang1025 > \par
+ \par
+</\f1\ltrch\lang1033 html\f0\rtlch\lang1025 >\f1\ltrch\lang1033\par
+}
+ 
